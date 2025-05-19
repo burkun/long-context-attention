@@ -116,7 +116,7 @@ def select_flash_attn_impl(
         elif stage == "bwd-only":
             return pytorch_attn_backward
         elif stage == "fwd-bwd":
-            from yunchang.ring.ring_pytorch_attn import pytorch_attn_func
+            from yunchang.ring.ring_pytorch_attn import ring_pytorch_attn_func
 
             return pytorch_attn_func
         else:
