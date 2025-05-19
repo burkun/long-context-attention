@@ -117,8 +117,7 @@ def select_flash_attn_impl(
             return pytorch_attn_backward
         elif stage == "fwd-bwd":
             from yunchang.ring.ring_pytorch_attn import ring_pytorch_attn_func
-
-            return pytorch_attn_func
+            return ring_pytorch_attn_func
         else:
             raise ValueError(f"Unknown stage: {stage}")
 
